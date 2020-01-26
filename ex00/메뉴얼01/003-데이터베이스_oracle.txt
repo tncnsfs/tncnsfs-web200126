@@ -1,0 +1,28 @@
+﻿
+003-데이터베이스_oracle
+
+1. 다운로드site: https://www.oracle.com/database/technologies/oracle-database-software-downloads.html#11g
+
+2. oracle계정: tncnsfs@gmail.com/Qlalf1231**
+
+3. DB 관련 : sysdba/1234
+	
+	C:\Users\FAMILY>sqlplus 	,SQL*Plus: Release 11.2.0.2.0 Production on 월 1월 27 02:06:04 2020
+	디비버: 
+	,connection setting:
+	,Host:DESKTOP-001
+	,Port:1521
+	,Database:XE
+	,User nane:SYSTEM
+	,SYSTEM
+	
+	,디비 비밀번호 cmd에서 초기화: 
+		C:\Users\FAMILY>sqlplus
+		Enter user-name: sys as sysdba
+		Enter password: 그냥 엔터
+		SQL> show user
+		SQL> alter user sys identified by 1234;
+		SQL> conn sys/1234 as sysdba;
+		Connected.
+
+4. 
