@@ -5,7 +5,48 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-01-24T04:00:14Z</updated>
+  <updated>2020-01-27T13:06:26Z</updated>
+  <entry>
+    <title>Spring Cloud Data Flow 2.4.0 M1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/01/27/spring-cloud-data-flow-2-4-0-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Janne Valkealahti</name>
+    </author>
+    <id>tag:spring.io,2020-01-27:3943</id>
+    <updated>2020-01-27T13:06:26Z</updated>
+    <content type="html">&lt;h2&gt;&lt;a href="#ui-changes-to-stream-editor" class="anchor" name="ui-changes-to-stream-editor"&gt;&lt;/a&gt;UI Changes to Stream Editor&lt;/h2&gt;
+&lt;p&gt;Stream Editor went through a much-needed touch of love and should now be more visually appealing. Here¡¯s a simple screenshot what it looks like:&lt;br/&gt;&lt;img src="https://user-images.githubusercontent.com/50398/73159326-2e2f7180-40de-11ea-81e5-6c77898df6cd.png" alt="blog-new-stream-editor" /&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#maven-preemptive-authentication" class="anchor" name="maven-preemptive-authentication"&gt;&lt;/a&gt;Maven Preemptive Authentication&lt;/h2&gt;
+&lt;p&gt;Support for using Maven Wagon transport for HTTP has been added to the Maven Artifact Resolver infrastructure. The driver for this was a request from a user to be able to use preemptive authentication with JFrog¡¯s artifactory. Use of it is currently optional via a property but we¡¯re looking to make it default sometime in the future and possibly introduce more wagon transports which might provide interesting options to place your artifacts behind ssh, git or whatever Apache Wagon is able to provide. If you have a particular interest or experience of it, let us know.&lt;/p&gt;&lt;h2&gt;&lt;a href="#various-bug-fixes-and-enhancements" class="anchor" name="various-bug-fixes-and-enhancements"&gt;&lt;/a&gt;Various Bug Fixes and Enhancements&lt;/h2&gt;
+&lt;p&gt;Apart from a list above more detailed lists can be found from &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/milestone/92?closed=1"&gt;Iteration 159&lt;/a&gt; and &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/milestone/95?closed=1"&gt;Iteration 160&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Audit can now track platform info&lt;/li&gt;
+  &lt;li&gt;Better error handling for platform-specific task cron scheduling&lt;/li&gt;
+  &lt;li&gt;Using Scheduled task arguments from a previous execution&lt;/li&gt;
+  &lt;li&gt;Task scheduling via shell&lt;/li&gt;
+  &lt;li&gt;Task Java DSL improvements&lt;/li&gt;
+  &lt;li&gt;Missing docs for scaling API&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#project-build-changes" class="anchor" name="project-build-changes"&gt;&lt;/a&gt;Project Build Changes&lt;/h2&gt;
+&lt;p&gt;Starting from this version we¡¯ve changed all Data Flow family projects to have our own parent pom in spring-cloud-dataflow-build order to have easier dependency handling and not to be so tightly dependant with spring-cloud-build.&lt;/p&gt;
+&lt;p&gt;We¡¯ve been using Travis CI in GitHub to build commits and pull requests and we¡¯re finally migrating to GitHub actions starting with spring-cloud-dataflow and spring-cloud-deployer-local. Experience is so good that we¡¯re rolling these out to other repos as well.&lt;/p&gt;
+&lt;p&gt;Integration testing is difficult and complex and for this we¡¯ve been using our own scripting against various CF and K8s environments. In those environments, we should only really test environment-specific things so we¡¯ve started to move some of these tests into docker and docker-compose so that it would be easier for any user to run tests that are not environment-specific.&lt;/p&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Data Flow 2.3.1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/01/27/spring-cloud-data-flow-2-3-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Janne Valkealahti</name>
+    </author>
+    <id>tag:spring.io,2020-01-27:3942</id>
+    <updated>2020-01-27T13:06:22Z</updated>
+    <content type="html">&lt;p&gt;This is a maintenance release for small bug fixes, enhancements, and dependency updates. Generally speaking, we¡¯re now on Spring Cloud Hoxton SR1. List of fixed issues can be found from &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues/3707"&gt;2.3.1 Issue List&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#maven-preemptive-authentication" class="anchor" name="maven-preemptive-authentication"&gt;&lt;/a&gt;Maven Preemptive Authentication&lt;/h2&gt;
+&lt;p&gt;Support for using Maven Wagon transport for HTTP has been added to the Maven Artifact Resolver infrastructure. The driver for this was a request from a user to be able to use preemptive authentication with JFrog¡¯s artifactory. Use of it is currently optional via a property but we¡¯re looking to make it default sometime in the future and possibly introduce more wagon transports which might provide interesting options to place your artifacts behind ssh, git or whatever Apache Wagon is able to provide.&lt;/p&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
+&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Neo4j's mad scientist Michael Hunger on graphs, databases and relationships</title>
     <link rel="alternate" href="https://spring.io/blog/2020/01/24/neo4j-s-mad-scientist-michael-hunger-on-graphs-databases-and-relationships" />
@@ -891,49 +932,6 @@ Spring Security 5.3.0.M1! You can find the complete details in the &lt;a href="h
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - 9th Anniversary Edition - January 7, 2020</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/01/07/this-week-in-spring-9th-anniversary-edition-january-7-2020" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2020-01-07:3923</id>
-    <updated>2020-01-07T18:28:17Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This is also the 9th anniversary of the &lt;em&gt;This Week in Spring&lt;/em&gt; blog series. I started it the first Tuesday after the new year in January 2011. NINE years is a long time, and it&amp;rsquo;s been - and continues to be - a ton of fun. &lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve never missed an installment - every Tuesday for almost a decade, come heck or high water - I get this done. It&amp;rsquo;s always on Tuesday, my time - whatever time that is. If I&amp;rsquo;m in Tokyo or Shanghai or Sydney then the installment may very well post sometime in most people&amp;rsquo;s Monday, or if I&amp;rsquo;m in California or Hawaii or South America, then it might be posted sometime early into most people&amp;rsquo;s Wednesday. But it&amp;rsquo;s always my Tuesday. Some times, I&amp;rsquo;ve had to cheat and apply the Hawaii rule: it&amp;rsquo;s still Tuesday if it&amp;rsquo;s still Tuesday in Hawaii! But, it&amp;rsquo;s always Tuesday. Things have gotten easier for me. Nowadays, plenty of airplanes have Wi-Fi. And, our blog software now supports scheduled posts. So, almost no reason I should ever miss an installment unless I&amp;rsquo;m &lt;em&gt;very&lt;/em&gt; busy. &lt;/p&gt;
-&lt;p&gt;I find that this exercise - of finding the latest and greatest, analyzing it and sharing it - has been very beneficial for me. It&amp;rsquo;s not only connected me to the zeitgeist of an ever-expanding, amazing ecosystem, it&amp;rsquo;s also connected me to you: you can&amp;rsquo;t know how much it means to me when people send &lt;a href="mailto:josh@joshlong.com"&gt;me email (josh@joshlong.com)&lt;/a&gt;, or &lt;a href="http://twitter.com/starbuxman"&gt;direct messages (@starbuxman)&lt;/a&gt; with their exciting new content to post. I love that enthusiasm. It&amp;rsquo;s better than coffee! Thank you, community. You&amp;rsquo;re epic, and I couldn&amp;rsquo;t be more grateful. &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Happy new year! In this first installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt; in the new year, I am delighted to have been able to bring you an interview with my hero, the amazing, the inimitable, the legendary, &lt;a href="https://spring.io/blog/2020/01/03/a-bootiful-podcast-spring-boot-and-spring-cloud-co-founder-dr-dave-syer"&gt;Spring Boot, and Spring Cloud co-founder Dr. Dave Syer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;We&amp;rsquo;d love your feedback on your &lt;a href="https://docs.google.com/forms/d/e/1FAIpQLSdh-FWTC1eWKym7z9dKkQZruQz8QePaQ94sBeL1EGHEbiOj7w/viewform?usp=send_form"&gt;opinion of Spring Cloud Data Flow&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Did you see the Spring Cloud &lt;a href="https://spring.io/blog/2019/12/23/spring-cloud-roadmap-and-hoxton-and-greenwich-maintenance-and-eol-announcements"&gt;roadmap published right before Christmas?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I like this blog, &lt;a href="https://medium.com/@santanu.mojumder/modernize-monolith-java-application-to-containerized-microservices-case-study-guide-7349a8e1f6a9"&gt;Modernize Monolith Java Application to Containerized Microservices&lt;/a&gt;, that looks at building microservices with Spring Boot&lt;/li&gt;
-  &lt;li&gt;I love Matt Raible&amp;rsquo;s tutorial over on the Okta blog, &lt;a href="https://developer.okta.com/blog/2020/01/06/crud-angular-9-spring-boot-2"&gt;&lt;em&gt;Build a CRUD App with Angular 9 and Spring Boot 2.2&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Oliver Drotbohm &lt;a href="https://www.infoq.com/presentations/monoliths-modules/"&gt;identifies the common issues in unstructured monoliths&lt;/a&gt; and discusses approaches to package design, component structure, transactions, and the usage of events, in this SpringOne Platform 2019 talk that&amp;rsquo;s now on InfoQ.&lt;/li&gt;
-  &lt;li&gt;I loved &lt;a href="https://www.infoq.com/presentations/spring-jib-scaffold-kubernetes/?itm_source=presentations_about_spring&amp;itm_medium=link&amp;itm_campaign=spring"&gt;this talk from Google&amp;rsquo;s Ray Tsang&lt;/a&gt; on tools - Jib, Skaffold - and best practices for Spring and Kubernetes.&lt;/li&gt;
-  &lt;li&gt;This is an interesting thread on Reddit: &lt;a href="https://www.reddit.com/r/java/comments/ehyvpo/is_reactive_stream_single_or_multi_threaded/"&gt;are Reactive Streams single threaded or multi-threaded&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This is an interesting example on &lt;a href="https://github.com/gregwhitaker/springboot-rsocketbasicauth-example"&gt;doing RSocket BASIC authentication with Spring&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;This seems like an interesting usecase: &lt;a href="https://medium.com/@milosbiljanovic/springboot-autocomplete-with-elasticsearch-11ea95d58854"&gt;Spring Boot and Elasticsearch&lt;/a&gt;-powered autocompletion.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Spring Boot and Spring Cloud co-founder Dr. Dave Syer</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/01/03/a-bootiful-podcast-spring-boot-and-spring-cloud-co-founder-dr-dave-syer" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2020-01-03:3922</id>
-    <updated>2020-01-03T08:25:16Z</updated>
-    <content type="html">&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/737749519&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
-&lt;p&gt;Hi, Spring fans! In this episode, &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt; talks to the one, the only, the inimitable, the amazing, his hero, the good &lt;a href="http://twitter.com/david_syer"&gt;Dr. Dave Syer&lt;/a&gt;, Spring Framework committer, former Spring Batch lead, former Spring Security OAuth lead, co-founder of both Spring Boot and Spring Cloud, etc. Statistically, if you&amp;rsquo;re using Spring today, you&amp;rsquo;re probably using code he wrote. This episode was recorded at SpringOne Platform 2019. Happy new year, and enjoy! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="http://github.com/dsyer"&gt;Dave on Github&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://twitter.com/david_syer"&gt;Dave on Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
