@@ -1,6 +1,6 @@
 .metadata
 .plugins
 .log
-
+.metadata/.plugins/
 /.metadata/
 /Servers/
