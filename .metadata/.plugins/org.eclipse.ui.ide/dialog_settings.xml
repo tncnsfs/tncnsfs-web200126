@@ -104,6 +104,7 @@
 	</list>
 	<section name="ResourceNavigator">
 		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
+		<item key="LINK_NAVIGATOR_TO_EDITOR" value="true"/>
 	</section>
 	<section name="SaveAsDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="706"/>
