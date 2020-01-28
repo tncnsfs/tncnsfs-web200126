@@ -1,0 +1,46 @@
+﻿003.02-DB커넥션풀설정
+
+1. pom.xml
+, https://github.com/brettwooldridge/HikariCP
+    <dependency>
+        <groupId>com.zaxxer</groupId>
+        <artifactId>HikariCP</artifactId>
+        <version>3.4.2</version>
+        <version>2.7.4</version> (교재내용 버전)
+    </dependency>
+
+2. root-context.xml		
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- Root context: defines shared resources visible to all other web components -->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="jdbcUrl"
+			value="jdbc:oracle:thin:@localhost:1521:XE"></property>
+		<property name="username" value="BOOK_EX"></property>
+		<property name="password" value="1234"></property>
+	</bean>
+
+	<!-- HikariCp configuration -->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<context:component-scan
+		base-package="org.zerock.sample"></context:component-scan>
+</beans>
+
+3. src/test/java (Junit Test:)
+	Junit테스트 , /ex00/src/test/java/org/zerock/persistence/DataSourceTests.java
+	
+
+
