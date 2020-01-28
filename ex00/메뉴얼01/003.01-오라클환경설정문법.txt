@@ -33,7 +33,8 @@ JDBC 환경 추가
 1. ex00:BuildPath:JavaBuild:Add라이브러리 , C:\app\db_lib\ojdbc8.jar
 2. ex00:BuildPath:Deployment Assembly: , C:\app\db_lib\ojdbc8.jar
 
-
+Junit Test:
+/ex00/src/test/java/org/zerock/persistence/JDBCTests.java
 
 
 

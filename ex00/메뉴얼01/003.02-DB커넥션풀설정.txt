@@ -39,7 +39,7 @@
 		base-package="org.zerock.sample"></context:component-scan>
 </beans>
 
-3. src/test/java
+3. src/test/java (Junit Test:)
 	Junit테스트 , /ex00/src/test/java/org/zerock/persistence/DataSourceTests.java
 	
 

@@ -29,3 +29,4 @@ dependency-reduced-pom.xml
 .gradle/
 out/
 
+/.metadata/

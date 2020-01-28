@@ -13,42 +13,26 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.zerock.mapper.TimeMapper;
+
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @Log4j
-public class DataSourceTests {
+public class TimeMapperTests {
 
 	@Setter(onMethod=@__({@Autowired}))
-		private DataSource dataSource;
+		private TimeMapper timeMapper;
 	
 	@Test
-	public void testConnection() {
+	public void testGetTime() {
 		
-		try(Connection con = dataSource.getConnection()) {
-			log.info(con);
-		} catch (Exception e) {
-			// TODO: handle exception
-			fail(e.getMessage());
-		}
-	}
-	
-	
-	@Setter(onMethod=@__({@Autowired}))
-	private SqlSessionFactory sqlSessionFactory;
-	
-	@Test
-	public void testMyBatis() {
+		log.info("---------------여기서 MyBatis 테스트 하는 중");
+		log.info(timeMapper.getClass().getName());
+		log.info(timeMapper.getTime());
+		log.info("---------------여기서 MyBatis 테스트 하는 중");
 		
-		try(SqlSession session = sqlSessionFactory.openSession();
-				Connection con = session.getConnection()) {
-			log.info(session);
-			log.info(con);
-		} catch (Exception e) {
-			// TODO: handle exception
-			fail(e.getMessage());
-		}
 	}
 }
