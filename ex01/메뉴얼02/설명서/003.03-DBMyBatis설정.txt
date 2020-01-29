@@ -75,8 +75,9 @@
 			</dependency>
 	
   	2) 프로퍼티파일설정:  			 ,/ex00/src/main/resources/log4jdbc.log4j2.properties
-  		- log4jdbc 를 이용하는 경우는 JDBC 드라이버와 URL 정보를 수정해야 한다. 
-	   - root-context.xml 에서
+ 		- log4jdbc 를 이용하는 경우는 JDBC 드라이버와 URL 정보를 수정해야 한다. 
+
+  	    - root-context.xml 에서
 		<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 			<!--<property name="driverClassName"
 				value="oracle.jdbc.driver.OracleDriver"></property>
