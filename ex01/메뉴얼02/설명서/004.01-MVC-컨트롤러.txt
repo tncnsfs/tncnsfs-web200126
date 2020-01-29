@@ -1,9 +1,0 @@
-﻿004.01-MVC-컨트롤러
-
-1. 어노테이션 추가 							, /ex01/src/main/java/org/zerock/controller/SampleController.java
-	@Controller : 컴포넌트에 스캔할수 있도록 추가 
-	@RequestMapping("/sample/") : 현재클래스의 모든 메서드들의 기본적인 URL경로, 클래스와 메서드에 선언가능 
-	
-	컨트롤러 스캔: <context:component-scan base-package="org.zerock.controller" /> , /ex01/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml
-	
-2. 	
