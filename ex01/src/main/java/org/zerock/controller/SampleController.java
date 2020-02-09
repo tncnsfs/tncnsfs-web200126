@@ -14,9 +14,11 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.zerock.domain.SampleDTO;
 import org.zerock.domain.SampleDTO2;
 import org.zerock.domain.SampleDTOList;
@@ -34,6 +36,26 @@ public class SampleController {
 	public void basic() {
 		System.out.println("basic001............");
 		log.info("basic............");
+	}
+	
+	
+	@PostMapping("/exUploadPost")
+	public void exUploadPost(ArrayList<MultipartFile> files) {
+		
+		files.forEach(file -> {
+			log.info("----------------------");
+			 System.out.println("----------------------");
+			 System.out.println("name:" + file.getOriginalFilename());
+			 System.out.println("size:" + file.getSize());
+		});
+	}
+	
+	
+	// 파일 업로드 페이지 
+	@GetMapping("/exUpload")
+	public void exUpload() {
+		log.info("/exUpload...");
+		System.out.println("exUpload..........-");
 	}
 	
 	
