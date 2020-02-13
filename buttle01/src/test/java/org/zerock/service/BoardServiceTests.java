@@ -41,11 +41,32 @@ public class BoardServiceTests {
 	}*/
 	
 	
-	@Test
+/*	@Test
 	public void testGetList(){
 	
 		service.getList().forEach(board -> log.info(board));
- 
+	}*/
+	
+/*	@Test
+	public void testGet(){
+		log.info(service.get(1L));
+	}
+*/	
+	@Test
+	public void testDelete(){
+		log.info("REMOVE RESLT: " + service.remove(19L));
+	}
+	
+	@Test
+	public void testUpdate(){
+		BoardVO board = service.get(8L);
+		
+		if(board==null){
+			return;
+		}
+		
+		board.setTitle("제목을 수정함");
+		log.info("MODIFY RESULT : "+service.modify(board));
 	}
 	
 	
