@@ -39,8 +39,5 @@
 		,updateDate =  sysdate
 		where bno  =  #{bno}
 	</update>
-
-
-
 </mapper>
 

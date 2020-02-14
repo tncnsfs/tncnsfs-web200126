@@ -38,7 +38,7 @@
 		<appender-ref ref="console" />
 	</root>
 
-	<logger name="jdbc.audit">
+<!-- 	<logger name="jdbc.audit">
 		<level value="warn" />
 	</logger>
 	<logger name="jdbc.resultset">
@@ -47,6 +47,6 @@
 
 	<logger name="jdbc.connection">
 		<level value="warn" />
-	</logger> 
+	</logger>  -->
 
 </log4j:configuration>

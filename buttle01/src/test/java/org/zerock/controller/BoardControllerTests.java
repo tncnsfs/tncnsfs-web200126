@@ -48,15 +48,15 @@ public class BoardControllerTests {
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/register")
 									.param("title", "test货肺款力格")
 									.param("content", "test货臂 郴侩")
-									.param("writer", "uer00")
+									.param("writer", "uer001")
 									).andReturn()
 									.getModelAndView()
 									.getViewName();
 
 		log.info("resultPage-----------------------------" + resultPage);
 				
-	}
-*/	
+	}*/
+	
 /*	@Test
 	public void tetGet() throws Exception {
 		log.info(mockMvc.perform(MockMvcRequestBuilders.get("/board/get")
@@ -84,7 +84,7 @@ public class BoardControllerTests {
 				
 	}*/
 	
-	@Test
+/*	@Test
 	public void testRemove() throws Exception{
 		
 		String resultPage = mockMvc.perform(MockMvcRequestBuilders.post("/board/remove")
@@ -95,5 +95,5 @@ public class BoardControllerTests {
 
 		log.info("resultPage-----------------------------" + resultPage);
 				
-	}
+	}*/
 }
