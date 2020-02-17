@@ -25,15 +25,17 @@
 								<th>성명</th>
 								<th>직위</th>
 								<th>소속</th>
+								<th>수정일</th>
 							</tr>
 						</thead>
 						<tfoot>
-						<tr>
+							<tr>
 								<th>No</th>
 								<th>사번</th>
 								<th>성명</th>
 								<th>직위</th>
 								<th>소속</th>
+								<th>수정일</th>
 							</tr>
 						</tfoot>
 						<tbody>
@@ -44,6 +46,8 @@
 									<td><c:out value="${ziquMing.content }" /></td>
 									<td><c:out value="${ziquMing.zhiwei }" /></td>
 									<td><c:out value="${ziquMing.suoshu }" /></td>
+									<td><fmt:formatDate pattern="yyyy-MM-dd"
+											value="${ziquMing.updateDate }" /></td>
 								</tr>
 							</c:forEach>
 						<tbody>
@@ -52,7 +56,7 @@
 			</div>
 		</div>
 	</div>
-<%@include file="../includes/footer.jsp"%>
+	<%@include file="../includes/footer.jsp"%>
 
-</body>
-</html>
+	</body>
+	</html>

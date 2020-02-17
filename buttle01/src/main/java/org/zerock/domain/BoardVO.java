@@ -18,5 +18,8 @@ public class BoardVO {
 	private String zhiwei;
 	
 	private String suoshu;
+	
+	private Date updateDate;
+	
 
 }
