@@ -6,10 +6,8 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	<a href="/board/list">Hello buttle!</a>  
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
-index.html

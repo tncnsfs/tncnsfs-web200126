@@ -46,10 +46,19 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
-	@GetMapping("/get")
+//	화면조회만
+/*	@GetMapping("/get")
 	public void get(@RequestParam("bno") Long bno, Model model){
 		
 		log.info("/get");
+		model.addAttribute("board", service.get(bno));
+	}*/
+	
+//	화면 조회 + 수정 -> url : {} 배열처리
+	@GetMapping({"/get", "/modify", "/remove"})
+	public void get(@RequestParam("bno") Long bno, Model model){
+		
+		log.info("/get or modify or remove");
 		model.addAttribute("board", service.get(bno));
 	}
 	
@@ -67,10 +76,13 @@ public class BoardController {
 	
 	@PostMapping("/remove")
 	public String remove(@RequestParam("bno") Long bno, RedirectAttributes rttr){
-		log.info("remove..." + bno);
 		if (service.remove(bno)) {
 			rttr.addFlashAttribute("result", "success");
+		}else{
+			log.info("삭제할 대상이 없습니다.");
+			System.out.println("삭제할 대상이 없습니다2.");
 		}
+		log.info("remove2.......");
 		return "redirect:/board/list";
 	}
 	

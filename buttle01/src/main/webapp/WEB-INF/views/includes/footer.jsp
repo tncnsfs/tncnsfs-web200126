@@ -1,10 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-<html>
-<head>
+<!-- <html> -->
+<!-- <head>
 	<title>Home</title>
 </head>
-<body>
+<body> -->
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top"> <i
@@ -12,7 +12,7 @@
 </a>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+<!-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
 	aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -31,10 +31,9 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <!-- Bootstrap core JavaScript-->
-<!-- <script src="/resources/vendor/jquery/jquery.min.js"></script> -->
 <script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->

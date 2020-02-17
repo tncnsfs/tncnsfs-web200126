@@ -11,16 +11,16 @@
 
 	<insert id="insert">
 		insert into tbl_board(bno,title,content,writer)
-		values(seq_board.nextval, #{title}, #{content}, #{writer})
+		values(seq_board.nextval, #{title}, #{content},  #{writer})
 	</insert>
 
 	<insert id="insertSelectKey">
 		<selectKey keyProperty="bno" order="BEFORE" resultType="long">
 			select seq_board.nextval from dual
 		</selectKey>
-		insert into tbl_board(bno, title, content, writer)
+		insert into tbl_board(bno, title, content, writer,zhiwei,suoshu)
 		values (#{bno},
-		#{title}, #{content}, #{writer})
+		#{title}, #{content}, #{writer}, #{zhiwei}, #{suoshu})
 	</insert>
 
 	<select id="read" resultType="org.zerock.domain.BoardVO">
@@ -36,6 +36,8 @@
 		set title   =  #{title}
 		,content    =  #{content}
 		,writer     =  #{writer}
+		,zhiwei     =  #{zhiwei}
+		,suoshu     =  #{suoshu}
 		,updateDate =  sysdate
 		where bno  =  #{bno}
 	</update>

@@ -16,35 +16,40 @@
 				<div class="panel-body">
 					<form role="form" action="/board/register" method="post">
 						<div class="form-group">
-							<label>title_사번 
-							<input class="form-control" name="title">
-							</label></br>
-							
-							<label>content_성명
-							<input class="form-control" name="content">
-							</label></br>
-							
-							<label>zhiwei_직위
-							<input class="form-control" name="zhiwei">
-							</label></br>
-							
-							<label>suoshu_소속
-							<input class="form-control" name="suoshu">
-							</label></br>
+							<label>title_사번 <input class="form-control" name='title'>
+							</label>
 						</div>
-						<!-- <button type="submit" class="btn btn-default">Submit</button> -->
-<!-- 						<button type="submit" class="btn btn-primary btn-user btn-block">Submit</button> -->
-						<button type="submit" class="btn btn-primary">Submit</button>
-<!-- 						<button type="reset" class="btn btn-default">Reset</button> -->
-						<button type="reset" class="btn btn-primary">Reset</button>
-					</form>
+						</br>
+
+						<div class="form-group">
+							<label>content_성명 <input class="form-control"
+								name='content'>
+							</label>
+						</div>
+						<div class="form-group">
+							<label>writer_작성자 <input class="form-control"
+								name='writer'>
+							</label>
+						</div>
+						</br>
+						<div class="form-group">
+							<label>zhiwei_직위 <input class="form-control"
+								name='zhiwei'>
+							</label>
+						</div>
+						</br>
+						<div class="form-group">
+							<label>suoshu_소속 <input class="form-control"
+								name='suoshu'>
+							</label>
+						</div></br>
 				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="reset" class="btn btn-primary">Reset</button>
+				</form>
 			</div>
 		</div>
 	</div>
 </div>
 
 <%@include file="../includes/footer.jsp"%>
-
-</body>
-</html>

@@ -18,10 +18,10 @@ public class BoardMapperTest {
 	@Setter(onMethod_=@Autowired)
 	private BoardMapper mapper;
 	
-	@Test
+/*	@Test
 	public void testGetList(){
 		mapper.getList().forEach(board -> log.info(board));
-	}
+	}*/
 	
 /*	@Test
 	public void testInsert(){
@@ -53,14 +53,14 @@ public class BoardMapperTest {
 	}*/
 	
 	
-/*	@Test
+	@Test
 	public void testDelete(){
 		
-		log.info("mapper.delete : " + mapper.delete(18l));
-	}*/
+		log.info("mapper.delete : " + mapper.delete(37l));
+	}
 	
 	
-	@Test
+	/*@Test
 	public void testUpdate(){
 		
 		BoardVO board = new BoardVO();
@@ -74,7 +74,7 @@ public class BoardMapperTest {
 		
 		log.info("mapper.update: " + cnt);
 	}
-	
+	*/
 	
 	
 }
