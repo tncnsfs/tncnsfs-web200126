@@ -55,7 +55,7 @@ public class BoardController {
 	}*/
 	
 //	화면 조회 + 수정 -> url : {} 배열처리
-	@GetMapping({"/get", "/modify", "/remove"})
+	@GetMapping({"/get", "/modify"})
 	public void get(@RequestParam("bno") Long bno, Model model){
 		
 		log.info("/get or modify or remove");

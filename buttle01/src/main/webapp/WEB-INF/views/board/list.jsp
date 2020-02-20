@@ -3,6 +3,10 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<html>
+<head>
+</head>
+<body>
 
 <div class="container-fluid">
 	<div class="col-lg-12">
@@ -14,9 +18,7 @@
 	<div class="col-lg-12">
 		<div class="card shadow mb-4">
 			<div class="panel-heading">
-				Board List Page
-				<button id="regBtn" type="button" class="btn btn-xs pull-right">Register
-					New Board</button>
+				<button id="regBtn" type="button" class="btn btn-xs pull-right">정보입력하기</button>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
@@ -82,7 +84,8 @@
 			</div>
 		</div>
 	</div>
-
+</body>
+</html>
 	<%@include file="../includes/footer.jsp"%>
 
 	<script type="text/javascript">

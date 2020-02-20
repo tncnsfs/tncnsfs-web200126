@@ -64,26 +64,28 @@
 </div>
 
 <script type="text/javascript">
-	$(document).ready(function() {
-		var formObj = $("form");
+$(document).ready(function() {
+	var formObj = $("form");
 
-		$('button').on("click", function(e) {
-			e.preventDefault();
+	$('button').on("click", function(e) {
+		e.preventDefault();
 
-			var operation = $(this).data("oper");
+		var operation = $(this).data("oper");
 
-			console.log(operation);
+		console.log(operation);
 
-			if (operation == 'remove') {
-				formObj.attr("action", "/board/remove");
-			} else if (operation == 'list') {
-				self.location = "/board/list";
-				return;
-			}
+		if (operation == 'remove') {
+			formObj.attr("action", "/board/remove");
+		} else if (operation === 'list') {
+			// self.location = "/board/list";
+			// return;
+			formObj.attr("action", "/board/list").attr("method", "get");
+			formObj.empty();
+		}
 
-			formObj.submit();
-		});
+		formObj.submit();
 	});
+});
 </script>
 
 <%@include file="../includes/footer.jsp"%>
